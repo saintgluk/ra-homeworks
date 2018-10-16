@@ -38,7 +38,9 @@
     const Link = ReactRouter.Link;
     const Switch = ReactRouter.Switch;
     const withRouter = ReactRouter.withRouter;
-
+    const BrowserRouter = ReactRouter.BrowserRouter;
+    const Header = withRouter(HeaderComponent)
+    
     ReactDOM.render(
       <App/>,
       document.getElementById('root')

@@ -1,8 +1,18 @@
 class SubscribtionPage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isBlocking: true
+    };
+  }
+
   render() {
     return (
       <div>
-        <Nav />
+        <Prompt
+          when={this.state.isBlocking}
+          message={location => `Вы уверены, что готовы уйти со страницы?`}
+        />
         <article className="container m-5">
           <h1>Оформление подписки</h1>
           <p>Досточно только очень сильно захотеть — и подписка офорлмена!</p>

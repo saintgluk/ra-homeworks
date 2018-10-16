@@ -21,18 +21,33 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react-dom.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-router-dom/4.3.1/react-router-dom.min.js"></script>
+
   <script src="https://unpkg.com/prop-types/prop-types.min.js"></script>
   <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
   <script type="text/babel" src="./js/articles.js"></script>
 
+  <script type="text/babel" src="./js/App.js"></script>
   <script type="text/babel" src="./js/Nav.js"></script>
   <script type="text/babel" src="./js/Article.js"></script>
   <script type="text/babel" src="./js/Homepage.js"></script>
+  <script type="text/babel" src="./js/ArticlePage.js"></script>
+  <script type="text/babel" src="./js/SubscribtionPage.js"></script>
 
   <script type="text/babel">
+    const ReactRouter = window.ReactRouterDOM;
+    const Router = ReactRouter.HashRouter;
+    const Route = ReactRouter.Route;
+    const NavLink = ReactRouter.NavLink;
+    const Link = ReactRouter.Link;
+    const Switch = ReactRouter.Switch;
+    const BrowserRouter = ReactRouter.BrowserRouter;
+    const withRouter = ReactRouter.withRouter;
+    const Prompt = ReactRouter.Prompt;
+
     ReactDOM.render(
-      <Homepage/>,
+      <App/>,
       document.getElementById('root')
     );
   </script>

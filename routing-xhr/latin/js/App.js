@@ -1,7 +1,7 @@
 class App extends React.Component {
   render() {
     return (
-      <Router>
+      <Router >
         <div>
           <Header />
           <Switch>

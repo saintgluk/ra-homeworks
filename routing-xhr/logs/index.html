@@ -27,6 +27,7 @@
 
   <script type="text/babel" src="./js/Current.js"></script>
   <script type="text/babel" src="./js/Archive.js"></script>
+  <script type="text/babel" src="./js/withFetcher.js"></script>
   <script type="text/babel" src="./js/App.js"></script>
 
   <script type="text/babel">
@@ -38,7 +39,7 @@
     const Switch = ReactRouter.Switch;
 
     ReactDOM.render(
-      <App/>,
+      <DataFetcher/>,
       document.getElementById('root')
     );
   </script>
