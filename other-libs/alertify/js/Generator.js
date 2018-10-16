@@ -38,6 +38,13 @@ class Site extends React.Component {
     this.setState(prevState => ({
       ids: [...prevState.ids, newId],
     }));
+
+    this.showMessage(newId.length);
+  }
+
+  showMessage(length) {
+    Alertify.set({ delay: 10000 });
+    Alertify.log(`Новый ID: ${length} символа`);
   }
 }
 

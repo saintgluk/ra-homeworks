@@ -9,8 +9,9 @@ var context = {
   today: nowDate.getDate() + '.' + (nowDate.getMonth() + 1) + '.' + nowDate.getFullYear(),
   quote: 'Роботы были спроектированы компьютерами — мы уже не знаем как они работают',
 
-  articles,
+  // articles,
 };
 
 var html = templateScript(context);
 $(document.body).append(html);
+

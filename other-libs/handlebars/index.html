@@ -27,15 +27,8 @@
         <p>Мудрость на сегодня: {{ quote }}</p>
       </section>
     </header>
-    
-    <main class="container">
-      {{#each articles}}
-        <article class="article">
-          <h2>{{subject}}</h1>
-          <p>{{body}}</p>
-        </article>
-      {{/each}}
-    </main>
+
+    <div class="article-container"></div>
   </script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react.js"></script>
@@ -51,6 +44,12 @@
 
   <script src="./js/articles.js"></script>
   <script src="./js/application.js"></script>
+  <script type="text/babel" src="./js/Article.js"></script>
+
+  <script type="text/babel">
+    const node = document.querySelector('.article-container');
+    ReactDOM.render(<Article />, node);
+  </script>
 </body>
 
 </html>
