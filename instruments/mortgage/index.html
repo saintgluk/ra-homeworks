@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/antd/3.10.1/antd.min.css" />
   <title>Калькулятор ипотеки</title>
 </head>
 
@@ -14,6 +14,9 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react-dom.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/antd/3.10.1/antd-with-locales.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/antd/3.10.1/antd.min.js"></script>
   <script src="https://unpkg.com/prop-types/prop-types.min.js"></script>
   <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
@@ -23,8 +26,17 @@
   <script type="text/babel" src="./js/MortgateCalculator.js"></script>
 
   <script type="text/babel">
+    const ButtonAntd = antd.Button;
+    const AutocompleteAntd = antd.Autocomplete;
+    const SelectAntd = antd.Select;
+    const FormAntd = antd.Form;
+    const InputNumberAntd = antd.InputNumber;
+    const InputAntd = antd.Input;
+    const FormItemAntd = FormAntd.Item;
+    const WrappedMortgateCalculator = FormAntd.create()(MortgateCalculator);
+
     ReactDOM.render(
-      <MortgateCalculator/>,
+      <WrappedMortgateCalculator/>,
       document.getElementById('root')
     );
   </script>
