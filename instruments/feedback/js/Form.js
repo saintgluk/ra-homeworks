@@ -21,10 +21,12 @@ class Form extends React.Component {
   }
 
   handleForm() {
-    const { name, text } = this.state
-    console.log("Данные на отправку:", name, text)
-
-    this.setState({ done: false })
+    setTimeout(function() {//() =>  или можно так, тогда без bind
+      const { name, text } = this.state
+      console.log(name, text)
+      this.setState({ done: false })
+    }
+    .bind(this), 1000)
   }
 
   handleNameChange(e) {
@@ -37,6 +39,7 @@ class Form extends React.Component {
 
   render() {
     const { done } = this.state
+
     console.log(this.state)
 
     return (

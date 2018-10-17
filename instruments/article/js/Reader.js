@@ -22,15 +22,22 @@ class Reader extends React.Component {
   }
 
   turnThePage(countPage) {
-    let nextPage = this.state.currentPage + countPage;
-    const total = this.state.pages.length;
+    let totalPages = this.state.pages.length;
+    const currentPage = this.state.currentPage;
+    let nextPage = this.getNextPage(currentPage, countPage, totalPages);
+    this.setState({ currentPage: nextPage })
+  }
+
+  getNextPage(currentPage, countPage, totalPages) {
+    let nextPage = currentPage + countPage;
+    const total = totalPages;
     if(nextPage > total){
       nextPage = total;
     }
     if(nextPage < 1){
       nextPage = 1;
     }
-    this.setState({ currentPage: nextPage })
+    return nextPage;
   }
 }
 
